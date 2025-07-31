@@ -1,3 +1,3 @@
-import "./_header.js";
-import "./_fade.js";
-import "./_ageCountUp.js";
+import "./header.js";
+import "./fade.js";
+import "./ageCountUp.js";
