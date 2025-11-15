@@ -567,7 +567,7 @@ hero
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 80vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -699,7 +699,7 @@ portfolio
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-item:nth-of-type(odd) .portfolio-img img {
+.portfolio-item:nth-of-type(odd) .portfolio-img {
   background-color: var(--color-green);
 }
 
@@ -707,7 +707,7 @@ portfolio
   color: var(--color-green-dark);
 }
 
-.portfolio-item:nth-of-type(even) .portfolio-img img {
+.portfolio-item:nth-of-type(even) .portfolio-img {
   background-color: var(--color-lime);
 }
 
@@ -715,10 +715,15 @@ portfolio
   color: var(--color-lime-dark);
 }
 
-.portfolio-img img {
+.portfolio-img {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   padding: 24px;
+}
+
+.portfolio-img img {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .portfolio-info {
