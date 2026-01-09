@@ -692,6 +692,8 @@ portfolio
   border-radius: 16px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-item:hover {
@@ -699,20 +701,42 @@ portfolio
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-item:nth-of-type(odd) .portfolio-img {
-  background-color: var(--color-green);
+.portfolio-item:nth-of-type(odd) {
+  .portfolio-img {
+    background-color: var(--color-green);
+  }
+
+  .portfolio-info .btn {
+    background-color: var(--color-green);
+
+    &:hover {
+      opacity: 0.9;
+      color: var(--color-black);
+    }
+  }
+
+  .portfolio-info-text h3 {
+    color: var(--color-green-dark);
+  }
 }
 
-.portfolio-item:nth-of-type(odd) .portfolio-info h3 {
-  color: var(--color-green-dark);
-}
+.portfolio-item:nth-of-type(even) {
+  .portfolio-img {
+    background-color: var(--color-lime);
+  }
 
-.portfolio-item:nth-of-type(even) .portfolio-img {
-  background-color: var(--color-lime);
-}
+  .portfolio-info .btn {
+    background-color: var(--color-lime);
 
-.portfolio-item:nth-of-type(even) .portfolio-info h3 {
-  color: var(--color-lime-dark);
+    &:hover {
+      opacity: 0.9;
+      color: var(--color-black);
+    }
+  }
+
+  .portfolio-info-text h3 {
+    color: var(--color-lime-dark);
+  }
 }
 
 .portfolio-img {
@@ -730,24 +754,28 @@ portfolio
   padding: 24px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+}
+
+.portfolio-info-text {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
-.portfolio-info h3 {
+.portfolio-info-text h3 {
   font-size: 20px;
 }
 
-.portfolio-info .summary {
+.portfolio-info-text .summary {
   font-size: 16px;
 }
 
-.portfolio-info .part-tool {
+.portfolio-info-text .part-tool {
   font-size: 14px;
   color: var(--color-gray-dark);
-}
-
-.portfolio-info .btn {
-  margin-top: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -762,7 +790,7 @@ portfolio
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .portfolio-list {
     gap: 32px;
   }
@@ -792,7 +820,7 @@ skills
 }
 
 .skill-item h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 8px;
 }
 
@@ -811,6 +839,10 @@ skills
 @media screen and (min-width: 1024px) {
   .skill-list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .skill-item h3 {
+    font-size: 18px;
   }
 }
 
