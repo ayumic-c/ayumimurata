@@ -681,6 +681,11 @@ about
 /* --------------------------------------------------
 portfolio
 -------------------------------------------------- */
+.coming-soon {
+  text-align: center;
+  font-weight: bold;
+}
+
 .portfolio-list {
   display: grid;
   grid-template-columns: 1fr;
